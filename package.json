@@ -1,15 +1,19 @@
 {
   "name": "backend_project",
   "version": "1.0.0",
-  "description": "",
+  "description": "learning backend concepts through project",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon src/index.js"
   },
   "keywords": [
     "node",
     "javascript"
   ],
   "author": "varun",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
 }
