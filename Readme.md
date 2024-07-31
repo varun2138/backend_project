@@ -35,3 +35,15 @@ throw error;
 }
 })();
 \*/
+
+//definitions
+
+**middleware**
+Middlewares in Express.js are functions that process requests and responses, handling tasks like authentication, logging, and parsing.
+ diagram-->https://developer.okta.com/assets-jekyll/blog/express-middleware-examples/middleware-30b3b30ad54e21d8281719042860f3edd9fb1f40f93150233a08165d908f4631.png
+
+**cookie-parser**
+#cookie-parser is a middleware for Express.js that parses cookies attached to the client request object. This allows you to access and manage the cookies sent by the client in your Express application. You can use it to easily read, write, and manipulate cookies.
+
+**cors**
+cors is a middleware for Express.js that enables Cross-Origin Resource Sharing (CORS), allowing your server to accept requests from different origins. By default, web browsers block requests made to a domain different from the one that served the web page, but with CORS, you can specify which domains are allowed to access your resources.
