@@ -18,6 +18,11 @@ app.use(express.static("public"));//serves static files like images from public 
 app.use(cookieParser());//is a middleware that parses cookies attached to client request object,allows you to access and manage the cookies sent by the client.
 
 
+// routes import
+import userRouter from "./routes/user.routes.js";
 
+
+// routes declaration
+app.use("/api/v1/users",userRouter);
 
 export default app;

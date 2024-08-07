@@ -1,10 +1,18 @@
 const asyncHandler=(requestHandler)=>{
-    (req,res,next)=>{
+   return (req,res,next)=>{
         Promise.resolve(requestHandler(req,res,next))
         .catch((error)=>next(error));
     }
 };
 
+
+
+// By using asyncHandler,
+// you ensure that any asynchronous
+// errors in the userRegister function
+// are properly handled, preventing
+// uncaught exceptions and making error handling
+// more consistent across your application.
 
 
 
