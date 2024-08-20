@@ -1,32 +1,21 @@
-const asyncHandler=(requestHandler)=>{
-   return (req,res,next)=>{
-        Promise.resolve(requestHandler(req,res,next))
-        .catch((error)=>next(error));
-    }
+const asyncHandler = (requestHandler) => {
+  return (req, res, next) => {
+    Promise.resolve(requestHandler(req, res, next)).catch((error) =>
+      next(error)
+    );
+  };
 };
 
+/*
+asyncHandler ensures that
+ all asynchronous errors are consistently passed
+  to your error-handling middleware.
+   This way, you don't accidentally 
+   forget to catch errors in some of your routes
 
-
-// By using asyncHandler,
-// you ensure that any asynchronous
-// errors in the userRegister function
-// are properly handled, preventing
-// uncaught exceptions and making error handling
-// more consistent across your application.
-
-
-
-
-
+*/
 
 export default asyncHandler;
-
-
-
-
-
-
-
 
 // method-1
 /*const asyncHandlerr=(fn)=async(req,res,next)=>{
@@ -39,4 +28,3 @@ export default asyncHandler;
      })
     }
 }*/
-
